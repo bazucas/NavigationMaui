@@ -1,11 +1,13 @@
-﻿namespace NavigationMaui;
+﻿using NavigationMaui.MVVM.Pages;
+
+namespace NavigationMaui;
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
+    public App()
+    {
+        InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+        MainPage = new NavigationPage(new StartPage());
+    }
 }
